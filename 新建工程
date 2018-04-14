@@ -1,0 +1,22 @@
+
+
+# CMSIS
+启动文件 startup_stm32f334x8.s
+寄存器头文件 stm32f334x8.h
+两个system文件：system_stm32f3xx.c/h
+使用的是M4内核，可以直接复制
+
+
+  /* Select the active input: IC1 = TI1FP1 */
+  LL_TIM_IC_SetActiveInput(TIM1, LL_TIM_CHANNEL_CH1, LL_TIM_ACTIVEINPUT_DIRECTTI);
+  
+  /* Configure the input filter duration: no filter needed */
+  LL_TIM_IC_SetFilter(TIM1, LL_TIM_CHANNEL_CH1, LL_TIM_IC_FILTER_FDIV1);
+
+  /* Set input prescaler: prescaler is disabled */
+  LL_TIM_IC_SetPrescaler(TIM1, LL_TIM_CHANNEL_CH1, LL_TIM_ICPSC_DIV1);
+
+  /* Select the edge of the active transition on the TI1 channel: rising edge */
+  LL_TIM_IC_SetPolarity(TIM1, LL_TIM_CHANNEL_CH1, LL_TIM_IC_POLARITY_RISING);
+  
+  
