@@ -13,7 +13,19 @@
     所选触发是否发生->EXTI_PR 
     清除相应标志位  rc_w1
     
-    
+# TIM
+## 更新计数周期
+IMx event generation register (TIMx_EGR) BIT 0
+重置counter和peroid
+
+# 定时器
+http://www.eeworld.com.cn/mcu/article_2016101830537.html
+精度问题
+## PWM
+http://blog.sina.com.cn/s/blog_6427cceb0101i5xe.html
+时基和PWM的不同：UPDATE和CC1，即开启的中断和标志位不同
+
+
 rc_w1：写1，或者读完会清零 Software can read as well as clear this bit by writing 1. Writing 0 has no effect on the
 bit value.
 /**
